@@ -1,4 +1,8 @@
 # name: Composer Update
+<<<<<<< HEAD
+=======
+
+>>>>>>> f2f5d6b (deploy .yamal made)
 # on:
 #   push:
 #     branches:
