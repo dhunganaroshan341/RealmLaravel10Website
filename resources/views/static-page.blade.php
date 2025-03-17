@@ -11,40 +11,41 @@
                         <div class="col-md-12">
                             <div class="block">
                                 <span class="text-uppercase text-sm letter-spacing"></span>
-                                <h1 class="mb-3 mt-3 text-center">{{ $page->name }}</h1>                                                                                
+                                <h1 class="mb-3 mt-3 text-center">{{ $page->name??"static-page" }}</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>                
+        </div>
     </div>
 </section>
 
 <section class="section-2  py-5">
     <div class="container py-2">
         <div class="row">
-            <div class="{{  ($page->image != null) ? 'col-md-6' : 'col-md-12' }} align-items-center d-flex">
+            <div class="{{  ($page && $page->image != null) ? 'col-md-6' : 'col-md-12' }} align-items-center d-flex">
+
                 <div class="about-block">
-                    <h1 class="title-color mb-3">{{ $page->name }}</h1>
-                    {!! $page->content !!}
+                    <h1 class="title-color mb-3">{{ $page->name??"static-page-name" }}</h1>
+                    {!! $page->content??"static-page-content" !!}
                     {{-- <p>This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
                     <p>This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p> --}}
                 </div>
             </div>
 
-            @if ($page->image != null)
+            @if ($page && $page->image != null)
                 <div class="col-md-6">
                     <div class="image-red-background">
                         {{-- <img src="{{ asset('assets/images/about-us.jpg') }}" alt="" class="w-100"> --}}
                         <img src="{{ asset('uploads/pages/thumb/large/'.$page->image) }}" alt="" class="w-100">
 
                     </div>
-                    
+
                 </div>
             @endif
 
-            
+
         </div>
     </div>
 </section>

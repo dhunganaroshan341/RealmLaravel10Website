@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Faq;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+
 
 class FaqController extends Controller
 {
@@ -16,9 +17,9 @@ class FaqController extends Controller
         if (!empty($request->keyword)) {
             $faq = $faq->where('question','like','%'.$request->keyword.'%');
         }
-        
+
         $faq = $faq->paginate(20);
-        
+
         $data['faq'] = $faq;
 
         return view('admin.faq.list',$data);
@@ -41,6 +42,7 @@ class FaqController extends Controller
                 'answer' => $request->answer,
                 'status' => $request->status
             ]);
+            $request->session()->flash();
 
             $request->session()->flash('success','Faq created successfully.');
 
