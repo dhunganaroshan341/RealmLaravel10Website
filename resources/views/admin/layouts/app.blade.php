@@ -11,9 +11,9 @@
         <link rel="stylesheet" href="{{ asset('admin_assets/assets/plugins/fontawesome-free/css/all.min.css') }}">
         <link rel="stylesheet" href="{{ asset('admin_assets/assets/css/adminlte.min.css?v=3.2.0') }}">
         <link rel="stylesheet" href="{{ asset('admin_assets/assets/plugins/summernote/summernote-bs4.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('admin_assets/assets/plugins/dropzone/dropzone.css') }}">    
-        <link rel="stylesheet" href="{{ asset('admin_assets/assets/plugins/jquery-ui/jquery-ui.min.css') }}">    
-        <link rel="stylesheet" href="{{ asset('admin_assets/assets/css/custom.css') }}">        
+        <link rel="stylesheet" href="{{ asset('admin_assets/assets/plugins/dropzone/dropzone.css') }}">
+        <link rel="stylesheet" href="{{ asset('admin_assets/assets/plugins/jquery-ui/jquery-ui.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('admin_assets/assets/css/custom.css') }}">
     </head>
     <body class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
@@ -23,17 +23,17 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                    </li>                    
-                </ul>                         
+                    </li>
+                </ul>
             </nav>
             <!-- /.navbar -->
             <!-- Main Sidebar Container -->
             <aside class="main-sidebar sidebar-dark-primary elevation-4">
                 <!-- Brand Logo -->
-                <a href="index3.html" class="brand-link bg-white" style="height: 57px;">
+                <a href="{{ route('home') }}" class="brand-link bg-white" style="height: 57px;">
 					<!-- <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
 					{{-- <img src="../images/logo.png" alt="" class="w-75 ml-3" style="margin-top:-20px"> --}}
-                    <h4>Admin Panel</h4>
+                    <h4>Realm Infotechs</h4>
 					<!-- <span class="brand-text font-weight-light">AdminLTE 3</span> -->
 				  </a>
                 <!-- Sidebar -->
@@ -76,26 +76,26 @@
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Settings</p>
                                 </a>
-                            </li>  
+                            </li>
                             <li class="nav-item">
                                 <a href="{{ route('admin.logout') }}" class="nav-link">
                                     <i class='fas fa-sign-out-alt nav-icon'></i>
 
                                     <p>Logout</p>
                                 </a>
-                            </li>                          
+                            </li>
                         </ul>
                     </nav>
                     <!-- /.sidebar-menu -->
                 </div>
                 <!-- /.sidebar -->
             </aside>
-            
+
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 @yield('content')
             </div>
-            
+
             <!-- /.content-wrapper -->
 
 
@@ -109,27 +109,27 @@
             <!-- /.control-sidebar -->
         </div>
         <!-- ./wrapper -->
-        
+
         <script src="{{ asset('admin_assets/assets/plugins/jquery/jquery.min.js') }}"></script>
 
         <script src="{{ asset('admin_assets/assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
         <script src="{{ asset('admin_assets/assets/js/adminlte.min.js?v=3.2.0') }}"></script>
-        
+
         <!-- Summernote -->
         <script src="{{ asset('admin_assets/assets/plugins/summernote/summernote-bs4.min.js') }}"></script>
 
-        <script src="{{ asset('admin_assets/assets/plugins/dropzone/dropzone.js') }}"></script> 
+        <script src="{{ asset('admin_assets/assets/plugins/dropzone/dropzone.js') }}"></script>
 
-        <script src="{{ asset('admin_assets/assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script> 
+        <script src="{{ asset('admin_assets/assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
 
 
         <script type="text/javascript">
             $(document).ready(function(){
                 $(".summernote").summernote({
                     height: 300
-                });                
-            });            
+                });
+            });
 
             $.ajaxSetup({
                 headers: {
