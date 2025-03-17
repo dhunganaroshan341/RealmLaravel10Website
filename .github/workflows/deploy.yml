@@ -1,5 +1,4 @@
 # name: Composer Update
-
 # on:
 #   push:
 #     branches:
